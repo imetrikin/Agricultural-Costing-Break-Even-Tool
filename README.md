@@ -1,97 +1,51 @@
-# Agricultural Costing & Break-Even Tool
+# Agricultural Costing & Break-Even Tool 🌱
 
-> A self-service Excel decision tool that lets a farmer and a business advisor work out **what each crop actually earns, what it must sell to break even, and which crop deserves the land** — in a single sitting, with no Excel knowledge required.
+### Built for MATI Northern Galilee (מט"י צפון הגליל) — a nonprofit supporting farmers and small businesses in the Galilee Panhandle
 
-Built and donated as a **volunteer project** for **MATI Northern Galilee (מט"י צפון הגליל)**, a nonprofit Small Business Development Center serving small businesses and farmers in the Galilee Panhandle.
-
-**Language:** the tool, its guide and its glossary are in Hebrew — that's who uses it.
-
----
+**📥 Download the tool: [`קובץ_תמחיר_חקלאי.xlsx`](קובץ_תמחיר_חקלאי.xlsx)**
 
 ## The problem
 
-Many small farmers price produce by habit. They plan around the Grade A market price and never account for the Grade B share, the waste, the produce lost in the field and in sorting, or the fixed costs that get paid whether or not anything grows. The result is a farmer working a full season on a crop that is quietly losing money.
+Many farmers price by gut feeling — planning around the Grade A price while ignoring Grade B, waste, field losses, and fixed costs. A crop can lose money all season without anyone noticing. MATI's advisors needed a tool a farmer with zero Excel skills could complete with them in one meeting.
 
-MATI's advisors needed a tool they could fill in *with* a farmer during a meeting — not a model that requires an analyst to operate.
+Built and donated as a volunteer project.
 
-## Structure
+## What it does
 
-Seven sheets, each feeding the next. Data is entered once and flows through the whole model. Supports up to **7 crops** side by side.
+Six connected sheets take a farmer from raw inputs to decisions:
 
-| # | Sheet | Purpose |
-|---|---|---|
-| 1 | `מדריך` — Guide | Order of work, colour legend, plain-language glossary, FAQ |
-| 2 | `דשבורד` — Dashboard | KPIs, charts, alerts, and Net Revenue Management analysis |
-| 3 | `נק' איזון` — Break-Even | Fixed costs, variable costs, contribution margin, break-even in units and shekels |
-| 4 | `תנובה_והפסדים` — Yield & Losses | Dunams, yield per dunam, field and sorting loss → net sellable yield |
-| 5 | `תמחיר_לפי_דרגה` — Pricing by Grade | Quality mix and prices → weighted average price per kg |
-| 6 | `ניתוח_רגישות` — Sensitivity | ±30% stress test on both price and cost, per crop |
-| 7 | `רווח_לדונם` — Profit per Dunam | The planning metric: profit per unit of land, by crop |
-
-## The model
-
-**Net yield** — not every kilogram grown is a kilogram sold:
-
-```
-Net yield = dunams × yield/dunam × (1 − field loss %) × (1 − sorting loss %)
-```
-
-**Weighted average price** — the core correction the tool exists to make. Waste is derived automatically as `1 − %Grade A − %Grade B` and earns nothing:
-
-```
-Weighted price = (%Grade A × Price A) + (%Grade B × Price B)
-```
-
-**Break-even, per crop and for the whole farm.** Per crop it's the straightforward fixed-costs-over-contribution calculation, rounded up to a whole unit. For the farm as a whole the tool uses the **weighted-average contribution margin method**, which handles a multi-crop business correctly rather than treating each crop as if it carried the fixed costs alone:
-
-```
-Break-even units   = ROUNDUP(total fixed costs ÷ contribution per unit)
-Break-even revenue = total fixed costs ÷ Σ(contribution ratio × share of sales)
-```
-
-**Profit per dunam** — land is the scarcest resource, so crops compete on return per dunam after fixed costs are allocated across the farm's total area.
-
-**Sensitivity analysis** — each crop is re-run across a ±30% range in 10-point steps, separately for selling price and for variable cost. Every row returns a new contribution, a new profit or loss, a recalculated break-even quantity, and a plain ✅ / ❌ verdict on whether the crop still works at that price.
-
-**Net Revenue Management** — for each crop the dashboard compares a 10% price increase against a 10% variable-cost reduction, at both per-kg and total-profit level, and names the stronger lever. It answers the question farmers actually ask: *should I push for a better price, or cut my costs?*
-
-## Design decisions worth noting
-
-**Fixed costs include what farmers usually leave out.** The fixed-cost sheet has 14 categories, and among rent, insurance, depreciation and interest it also lists **unpaid family labour** and **family living expenses**. On a family farm these are real economic costs; excluding them is exactly how a farm appears profitable while the family gets poorer.
-
-**A cost-per-kg calculator for people who don't think in per-kg terms.** Farmers know what they paid the fuel supplier, not what fuel costs per kilogram of peppers. A side calculator takes the amount paid and the crop, looks up that crop's net yield with `INDEX`/`MATCH` against an array constant, and returns ₪/kg ready to drop into the cost table.
-
-**Built for non-technical users.** Colour-coded inputs (yellow = type here, calculated cells left alone), a 💡 explanation line on every sheet stating the formula in words, a Hebrew guide with the correct order of work and a glossary, and verdict columns that return ✅/❌ rather than a number the user has to interpret.
-
-**It ships empty.** This is a template, not a case study. Every input cell is zero until a farmer fills it in — there is no client data in this repository.
-
-## Excel techniques used
-
-- Multi-sheet model with a single entry point — crop names and quantities propagate by reference, so nothing is typed twice
-- Weighted-average contribution margin break-even for a multi-product business
-- `SUMPRODUCT` for revenue and total variable cost across all crops
-- `INDEX` + `MATCH` against an array constant for the cost-per-kg lookup
-- `IFERROR` throughout so an unfilled template shows zeros rather than `#DIV/0!`
-- `NA()` in chart helper columns to suppress empty crops from pie charts
-- Dynamic KPI text built with `TEXT()` and concatenation (e.g. `₪12,400 לדונם`)
-- Conditional verdict logic driving the sensitivity and NRM outputs
-
-## Repository contents
-
-| Path | Description |
+| Sheet | Answers |
 |---|---|
-| `קובץ_תמחיר_חקלאי.xlsx` | The tool — 7 sheets, ready to fill in |
-| `docs/workbook-preview.pdf` | Full PDF export of every sheet, so you can view the tool without Excel |
-| `LICENSE` | MIT |
+| Yield & Losses | How much produce actually reaches the market |
+| Pricing by Grade | What 1 kg *really* earns (weighted A / B / waste price) |
+| Break-Even | How much each crop must sell to cover its costs |
+| Profit per Dunam | Which crop earns the most per unit of land |
+| Sensitivity ±30% | Does the farm survive a price drop? |
+| Dashboard | KPIs, automatic alerts, and NRM: raise price or cut cost? |
 
-## How to use it
+**KPIs, red/green alerts flagging losing and winning crops, and NRM analysis:**
 
-1. Download `קובץ_תמחיר_חקלאי.xlsx` (or browse `docs/workbook-preview.pdf` first).
-2. Open the **מדריך** (Guide) sheet and follow the stated order of work.
-3. Fill in the yellow cells only. Everything else calculates itself.
-4. Read the **דשבורד** (Dashboard) sheet for KPIs, alerts and the NRM recommendation.
+![image](image.png)
+![image-1](image-1.png)
 
-## About
+**Fixed costs, variable costs per kg, and contribution per crop:**
 
-Built by **Ilan Metrikin** — economics & data analyst.
+![image-2](image-2.png)
+![image-3](image-3.png)
+
+## Built like a product
+
+Color-coded inputs (yellow = type here, green = calculated), a step-by-step Hebrew user guide, and an FAQ — no Excel knowledge required.
+
+**Order of work, color legend, and plain-language glossary:**
+
+![image-4](image-4.png)
+
+## Try it
+
+Download the file, open the **מדריך** (guide) sheet, and fill the yellow cells in order. The dashboard does the rest.
+
+---
+
+Built by **Ilan Metrikin** — economics & data analyst
 📧 [imetrikin@gmail.com](mailto:imetrikin@gmail.com) · [LinkedIn](https://www.linkedin.com/in/ilan-metrikin-36a652218/)
