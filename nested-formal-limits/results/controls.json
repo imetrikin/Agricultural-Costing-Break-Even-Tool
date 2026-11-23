@@ -1,0 +1,722 @@
+{
+ "budget_sweep_B": {
+  "b1": [
+   {
+    "budget": 1500,
+    "method": "Sigma1-completeness",
+    "proof_nodes": 37,
+    "status": "proved"
+   }
+  ],
+  "b10": [
+   {
+    "budget": 1500,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 6000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 24000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   }
+  ],
+  "b11": [
+   {
+    "budget": 1500,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 6000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 24000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   }
+  ],
+  "b12": [
+   {
+    "budget": 1500,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 6000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 24000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   }
+  ],
+  "b13": [
+   {
+    "budget": 1500,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 6000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 24000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   }
+  ],
+  "b14": [
+   {
+    "budget": 1500,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 6000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   },
+   {
+    "budget": 24000,
+    "method": "none applicable",
+    "reason": "no complete method for this logical form",
+    "status": "unresolved"
+   }
+  ],
+  "b2": [
+   {
+    "budget": 1500,
+    "method": "Sigma1-completeness",
+    "proof_nodes": 4935,
+    "status": "proved"
+   }
+  ],
+  "b3": [
+   {
+    "budget": 1500,
+    "method": "Sigma1-completeness",
+    "proof_nodes": 11579,
+    "status": "proved"
+   }
+  ],
+  "b4": [
+   {
+    "budget": 1500,
+    "method": "Sigma1-completeness",
+    "proof_nodes": 16812,
+    "status": "proved"
+   }
+  ],
+  "b5": [
+   {
+    "budget": 1500,
+    "method": "Sigma1-completeness",
+    "proof_nodes": 198510,
+    "status": "proved"
+   }
+  ],
+  "b6": [
+   {
+    "budget": 1500,
+    "method": "induction+rewriting",
+    "proof_nodes": 2,
+    "status": "proved",
+    "steps": 3
+   }
+  ],
+  "b7": [
+   {
+    "budget": 1500,
+    "method": "induction+rewriting",
+    "proof_nodes": 5,
+    "status": "proved",
+    "steps": 4
+   }
+  ],
+  "b8": [
+   {
+    "budget": 1500,
+    "method": "induction+rewriting",
+    "proof_nodes": 60,
+    "status": "proved",
+    "steps": 35
+   }
+  ],
+  "b9": [
+   {
+    "budget": 1500,
+    "method": "induction+rewriting",
+    "proof_nodes": 63,
+    "status": "proved",
+    "steps": 36
+   }
+  ]
+ },
+ "extensions": [
+  {
+   "goedel_sentence_equiv_own_consistency": true,
+   "goedel_sentence_provable": false,
+   "own_consistency_equiv_Con^": 1,
+   "proves_own_consistency": false,
+   "theory": "B",
+   "unprovability_needs": "Con^1"
+  },
+  {
+   "goedel_sentence_equiv_own_consistency": true,
+   "goedel_sentence_provable": false,
+   "own_consistency_equiv_Con^": 2,
+   "proves_own_consistency": false,
+   "theory": "B + Con^1",
+   "unprovability_needs": "Con^2"
+  },
+  {
+   "goedel_sentence_equiv_own_consistency": true,
+   "goedel_sentence_provable": false,
+   "own_consistency_equiv_Con^": 3,
+   "proves_own_consistency": false,
+   "theory": "B + Con^2",
+   "unprovability_needs": "Con^3"
+  },
+  {
+   "goedel_sentence_equiv_own_consistency": true,
+   "goedel_sentence_provable": false,
+   "own_consistency_equiv_Con^": 4,
+   "proves_own_consistency": false,
+   "theory": "B + Con^3",
+   "unprovability_needs": "Con^4"
+  },
+  {
+   "goedel_sentence_equiv_own_consistency": true,
+   "goedel_sentence_provable": false,
+   "own_consistency_equiv_Con^": 5,
+   "proves_own_consistency": false,
+   "theory": "B + Con^4",
+   "unprovability_needs": "Con^5"
+  },
+  {
+   "goedel_sentence_equiv_own_consistency": true,
+   "goedel_sentence_provable": false,
+   "own_consistency_equiv_Con^": 6,
+   "proves_own_consistency": false,
+   "theory": "B + Con^5",
+   "unprovability_needs": "Con^6"
+  },
+  {
+   "consistent_given": "Con(B) (Gödel II: B ⊬ Con(B))",
+   "proves_own_consistency": false,
+   "proves_own_inconsistency": true,
+   "theory": "B + ¬Con(B)"
+  }
+ ],
+ "fixed_point_verdicts_C": [
+  {
+   "B_proves": true,
+   "B_refutes": false,
+   "fixed_point": "⊤",
+   "independent_of_B": false,
+   "true_in_N": true
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "¬□⊥",
+   "independent_of_B": true,
+   "true_in_N": true
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "□⊥",
+   "independent_of_B": true,
+   "true_in_N": false
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "¬□□⊥",
+   "independent_of_B": true,
+   "true_in_N": true
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "□□⊥",
+   "independent_of_B": true,
+   "true_in_N": false
+  },
+  {
+   "B_proves": false,
+   "B_refutes": true,
+   "fixed_point": "⊥",
+   "independent_of_B": false,
+   "true_in_N": false
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "¬□□□⊥",
+   "independent_of_B": true,
+   "true_in_N": true
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "□□□⊥",
+   "independent_of_B": true,
+   "true_in_N": false
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "(□⊥ ∨ ¬□□⊥)",
+   "independent_of_B": true,
+   "true_in_N": true
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "¬□□□□⊥",
+   "independent_of_B": true,
+   "true_in_N": true
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "□□□□⊥",
+   "independent_of_B": true,
+   "true_in_N": false
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "(□□⊥ ∨ ¬□□□⊥)",
+   "independent_of_B": true,
+   "true_in_N": true
+  },
+  {
+   "B_proves": false,
+   "B_refutes": false,
+   "fixed_point": "(□⊥ ∨ ¬□□□⊥)",
+   "independent_of_B": true,
+   "true_in_N": true
+  }
+ ],
+ "implementation_invariance": {
+  "P1": "394eedbc62a92777f71b994e0a3ecec18dce50c97a44ac672ae3071fb9f0f8a3",
+  "P2": "394eedbc62a92777f71b994e0a3ecec18dce50c97a44ac672ae3071fb9f0f8a3",
+  "P3": "4f662e76d4af902e8d0b141310cd4867971b6acc2a7dde131302ad5ced4d77d6",
+  "P3_differs": true,
+  "identical": true
+ },
+ "parent_knowledge_table": [
+  {
+   "C_con2": "proves",
+   "C_impl": "—",
+   "C_lean": "proves",
+   "C_opt": "proves",
+   "C_pess": "refutes",
+   "formal": "¬□⊥",
+   "sentence": "Con(B)",
+   "true_in_N_if_B_sound": true
+  },
+  {
+   "C_con2": "proves",
+   "C_impl": "—",
+   "C_lean": "proves",
+   "C_opt": "proves",
+   "C_pess": "refutes",
+   "formal": "¬□⊥",
+   "sentence": "G_B (≡ Con(B))",
+   "true_in_N_if_B_sound": true
+  },
+  {
+   "C_con2": "refutes",
+   "C_impl": "—",
+   "C_lean": "refutes",
+   "C_opt": "refutes",
+   "C_pess": "proves",
+   "formal": "□⊥",
+   "sentence": "¬Con(B)",
+   "true_in_N_if_B_sound": false
+  },
+  {
+   "C_con2": "proves",
+   "C_impl": "—",
+   "C_lean": "proves",
+   "C_opt": "—",
+   "C_pess": "refutes",
+   "formal": "¬□□⊥",
+   "sentence": "Con(B + Con B)",
+   "true_in_N_if_B_sound": true
+  },
+  {
+   "C_con2": "—",
+   "C_impl": "—",
+   "C_lean": "proves",
+   "C_opt": "—",
+   "C_pess": "refutes",
+   "formal": "¬□□□⊥",
+   "sentence": "Con^3(B)",
+   "true_in_N_if_B_sound": true
+  },
+  {
+   "C_con2": "refutes",
+   "C_impl": "—",
+   "C_lean": "refutes",
+   "C_opt": "refutes",
+   "C_pess": "proves",
+   "formal": "□¬□⊥",
+   "sentence": "□Con(B) (B proves its consistency)",
+   "true_in_N_if_B_sound": false
+  }
+ ],
+ "parent_self_consistency": {
+  "C_con2": {
+   "consistent_if": "consistent iff B ⊬ ¬X; guaranteed by Con^3(B)",
+   "own": "neither"
+  },
+  "C_impl": {
+   "consistent_if": "n/a (makes no assertions)",
+   "own": null
+  },
+  "C_lean": {
+   "consistent_if": "relative to the consistency of the parent's own foundations (not provable by the parent)",
+   "own": null
+  },
+  "C_opt": {
+   "consistent_if": "consistent iff B ⊬ ¬X; guaranteed by Con^2(B)",
+   "own": "neither"
+  },
+  "C_pess": {
+   "consistent_if": "consistent iff B ⊬ ¬X; guaranteed by Con^1(B)",
+   "own": "proves its own INconsistency"
+  }
+ },
+ "search_vs_provability": [
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "add_comm",
+   "induction_depth": 1,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_assoc",
+   "induction_depth": 1,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_comm",
+   "induction_depth": 1,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "distrib_right",
+   "induction_depth": 1,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_assoc",
+   "induction_depth": 1,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_comm",
+   "induction_depth": 2,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_assoc",
+   "induction_depth": 2,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_comm",
+   "induction_depth": 2,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "distrib_right",
+   "induction_depth": 2,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_assoc",
+   "induction_depth": 2,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_comm",
+   "induction_depth": 3,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_assoc",
+   "induction_depth": 3,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_comm",
+   "induction_depth": 3,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "distrib_right",
+   "induction_depth": 3,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_assoc",
+   "induction_depth": 3,
+   "knowledge": "axioms only"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_comm",
+   "induction_depth": 1,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_assoc",
+   "induction_depth": 1,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "mul_comm",
+   "induction_depth": 1,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "distrib_right",
+   "induction_depth": 1,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_assoc",
+   "induction_depth": 1,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_comm",
+   "induction_depth": 2,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_assoc",
+   "induction_depth": 2,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "mul_comm",
+   "induction_depth": 2,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "distrib_right",
+   "induction_depth": 2,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_assoc",
+   "induction_depth": 2,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_comm",
+   "induction_depth": 3,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "add_assoc",
+   "induction_depth": 3,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "proved",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "mul_comm",
+   "induction_depth": 3,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "proved",
+   "budget 1600": "proved",
+   "budget 25": "not found",
+   "budget 400": "proved",
+   "budget 6400": "proved",
+   "goal": "distrib_right",
+   "induction_depth": 3,
+   "knowledge": "after theory exploration"
+  },
+  {
+   "budget 100": "not found",
+   "budget 1600": "not found",
+   "budget 25": "not found",
+   "budget 400": "not found",
+   "budget 6400": "not found",
+   "goal": "mul_assoc",
+   "induction_depth": 3,
+   "knowledge": "after theory exploration"
+  }
+ ]
+}

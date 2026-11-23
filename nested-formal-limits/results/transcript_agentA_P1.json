@@ -1,0 +1,410 @@
+{
+ "agent": "A-mathematician",
+ "cited_uniform_theorems": {
+  "QE_LINEAR_ARITHMETIC": "Cooper's procedure maps every formula of the language {0,S,+,<} to an equivalent quantifier-free formula over atoms 0<L, L=0, d|L; each step is provable from the successor/addition/order axioms with induction for that language.",
+  "TARSKI_UNDEFINABILITY": "If the diagonal function is representable in T (and T is consistent), no formula Tr(x) satisfies T ⊢ Tr(⌜σ⌝) ↔ σ for all sentences σ."
+ },
+ "claims": [
+  {
+   "assumptions": [],
+   "category": "hypothesis-check",
+   "cid": "A-noQ",
+   "cites": [],
+   "evidence": {
+    "multiplication_symbol": false
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_not_contains_Q",
+   "text": "My theory does not contain Robinson's Q: Q's multiplication axioms (x·0 = 0, x·Sy = x·y + x) cannot even be written in my language. Hence the hypotheses of the diagonal lemma, of the derivability conditions and of Tarski's theorem (all require T ⊇ Q) are NOT met by my system."
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a1",
+   "cites": [],
+   "evidence": {
+    "decided_true": true,
+    "kernel_proof": true
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "a1",
+   "text": "T ⊢ 2 + 3 = 5"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a2",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "decided_true": true,
+    "kernel_proof": null
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a2",
+   "text": "T ⊢ forall x. exists y. x = y + y | x = y + y + 1  (by my decision procedure; no kernel proof constructed)"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a3",
+   "cites": [],
+   "evidence": {
+    "decided_true": true,
+    "kernel_proof": true
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "a3",
+   "text": "T ⊢ forall x y. x + y = y + x"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a4",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "decided_true": true,
+    "kernel_proof": null
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a4",
+   "text": "T ⊢ forall x. 7 < x -> (exists a b. x = a + a + a + b + b + b + b + b)  (by my decision procedure; no kernel proof constructed)"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a5",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "decided_true": false,
+    "kernel_proof": null
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a5",
+   "text": "T ⊢ ¬ forall x. 6 < x -> (exists a b. x = a + a + a + b + b + b + b + b)  (by my decision procedure; no kernel proof constructed)"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a6",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "decided_true": true,
+    "kernel_proof": null
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a6",
+   "text": "T ⊢ exists x. forall y. x < y | x = y  (by my decision procedure; no kernel proof constructed)"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a7",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "decided_true": true,
+    "kernel_proof": null
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a7",
+   "text": "T ⊢ forall x y. x < y -> (exists z. x + z + 1 = y)  (by my decision procedure; no kernel proof constructed)"
+  },
+  {
+   "assumptions": [],
+   "category": "expressiveness",
+   "cid": "A-a8",
+   "cites": [],
+   "evidence": {},
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a8",
+   "text": "'forall x. exists y. y * y = x | x < y * y' cannot be stated in my language (it uses a symbol I do not have)."
+  },
+  {
+   "assumptions": [],
+   "category": "expressiveness",
+   "cid": "A-a9",
+   "cites": [],
+   "evidence": {},
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a9",
+   "text": "'17 * 23 = 391' cannot be stated in my language (it uses a symbol I do not have)."
+  },
+  {
+   "assumptions": [],
+   "category": "expressiveness",
+   "cid": "A-a10",
+   "cites": [],
+   "evidence": {},
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a10",
+   "text": "'forall n. exists p. n < p & (1 < p & forall a < p. forall b < p. ~(a * b = p))' cannot be stated in my language (it uses a symbol I do not have)."
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "A-a11",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "decided_true": true,
+    "kernel_proof": null
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "a11",
+   "text": "T ⊢ forall x y. x + y = 0 -> x = 0  (by my decision procedure; no kernel proof constructed)"
+  },
+  {
+   "assumptions": [
+    "correctness of quantifier elimination (cited, applied in my metatheory)"
+   ],
+   "category": "completeness",
+   "cid": "A-complete",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "bounded_kernel_checked": 91,
+    "false": 141,
+    "kernel_agree": 91,
+    "max_qe_disjuncts": 12,
+    "n": 300,
+    "true": 159
+   },
+   "formal": null,
+   "level": "CONDITIONAL",
+   "subject": "A_complete",
+   "text": "Every sentence I have formulated (300 random + all challenges in my language) was decided. Hypothesis: my theory is complete -- every sentence of my language is provable or refutable. Support: my decision procedure eliminates quantifiers by steps each provable in my theory, and every quantifier-free sentence is decided by computation. NOTE: this is a statement ABOUT my theory that my own language cannot express (it has no way to talk about its proofs); I can only assert it in an informal metatheory, relying on the correctness of the cited QE theorem."
+  },
+  {
+   "assumptions": [],
+   "category": "expressiveness",
+   "cid": "A-UP",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "structure_ok": true
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_definable_UP",
+   "text": "Every set of numbers definable in my language is ultimately periodic: after quantifier elimination a one-variable formula is a Boolean combination of atoms 0 < a·x + c, a·x + c = 0, d | a·x + c, each periodic beyond |c|/|a|. (Checked: every QE output I produced has this form.)"
+  },
+  {
+   "assumptions": [],
+   "category": "expressiveness",
+   "cid": "A-nondef",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "all_candidates_refuted": true,
+    "candidates": 19
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_squares_undefinable",
+   "text": "The squares, the primes and the powers of two are NOT definable in my language: none is ultimately periodic (for any threshold N and period p there is n ≥ N with membership of n and n+p differing; e.g. for N=100, p=7: squares: n=121, primes: n=101, powers_of_two: n=128). Every concrete candidate definition also has an explicit counterexample."
+  },
+  {
+   "assumptions": [],
+   "category": "expressiveness",
+   "cid": "A-nomul",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "candidate": "exists u. u = 0 & u = 0 & x = 0 | u = 0 & u = 1 & x = 0 | u = 0 & u = 2 & x = 0 | u = 0 & u = 3 & x = 0 | u = 1 & u = 0 & x = 0 | u = 1 & u = 1 & x = 1 | u = 1 & u = 2 & x = 2 | u = 1 & u = 3 & x = 3 | u = 2 & u = 0 & x = 0 | u = 2 & u = 1 & x = 2 | u = 2 & u = 2 & x = 4 | u = 2 & u = 3 & x = 6 | u = 3 & u = 0 & x = 0 | u = 3 & u = 1 & x = 3 | u = 3 & u = 2 & x = 6 | u = 3 & u = 3 & x = 9",
+    "candidate_says": false,
+    "counterexample": 16,
+    "profile": "threshold=11, period=1, first members=[0, 1, 4, 9]",
+    "target": "squares",
+    "target_says": true,
+    "verified": true
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_mul_undefinable",
+   "text": "Multiplication is not definable in my language. A formula μ(u,v,z) can agree with z = u·v on any finite table (I built one for u,v < 4), but if some μ defined multiplication everywhere, ∃u μ(u,u,x) would define the squares, which is impossible (A-nondef). For the finite-table formula the induced 'squares' definition fails at x = 16."
+  },
+  {
+   "assumptions": [],
+   "category": "expressiveness",
+   "cid": "A-constmul",
+   "cites": [],
+   "evidence": {},
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_const_mul",
+   "text": "Multiplication by each FIXED numeral is expressible (17·x is x + x + ... + x), so every linear statement is available to me; only multiplication of two variables is missing."
+  },
+  {
+   "assumptions": [],
+   "category": "self-reference",
+   "cid": "A-negcode",
+   "cites": [
+    "QE_LINEAR_ARITHMETIC"
+   ],
+   "evidence": {
+    "gaps_unbounded_checked": true
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_syntax_unrepresentable_standard",
+   "text": "Under the standard (Cantor pairing) coding of my own syntax, the map code(φ) ↦ code(¬φ) is a quadratic polynomial; its values have unbounded gaps, so its graph is not definable in my language (its range would be a definable, non-ultimately-periodic set). I cannot even represent negation of my own formulas, let alone substitution or diagonalization."
+  },
+  {
+   "assumptions": [],
+   "category": "self-reference",
+   "cid": "A-truthpred",
+   "cites": [],
+   "evidence": {
+    "checked": 400,
+    "true_biconditionals": 400
+   },
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_truth_definable_under_nu",
+   "text": "There is a coding ν of my sentences (enumerate sentences; give the k-th true one the code 2k and the k-th false one 2k+1 -- computable because my theory is decidable) under which the formula Even(x) := ∃y (x = y + y) is a truth predicate for my own language: for every sentence σ, T ⊢ Even(ν(σ)) ↔ σ. Checked for the first 400 sentences of an enumeration: 400/400 biconditionals decided true."
+  },
+  {
+   "assumptions": [],
+   "category": "self-reference",
+   "cid": "A-nodiag",
+   "cites": [
+    "TARSKI_UNDEFINABILITY"
+   ],
+   "evidence": {},
+   "formal": null,
+   "level": "DECIDED",
+   "subject": "A_no_diagonalization",
+   "text": "Consequently, under ν the diagonal function is NOT definable in my language: if it were, Tarski's diagonal argument would turn Even into a contradiction (σ ↔ ¬Even(ν(σ)) ↔ ¬σ). So in my world, self-reference fails for a structural reason (syntax operations are not representable), not because some truths are unprovable."
+  },
+  {
+   "assumptions": [
+    "A-complete's assumption"
+   ],
+   "category": "limitation-type",
+   "cid": "A-HA1",
+   "cites": [],
+   "evidence": {},
+   "formal": null,
+   "level": "CONDITIONAL",
+   "subject": "A_limits_expressive",
+   "text": "My limitations are limitations of EXPRESSIVE POWER: everything I can state, I can decide; what I cannot do is state facts about products, squares, primes, or my own syntax."
+  },
+  {
+   "assumptions": [],
+   "category": "stronger-framework",
+   "cid": "A-HA2",
+   "cites": [],
+   "evidence": {},
+   "formal": null,
+   "level": "SPECULATIVE",
+   "subject": "A_richer_system_unknown",
+   "text": "A language with a symbol for multiplication of variables would express squares and primes (they are definable from multiplication by first-order formulas). Whether such a richer system would still be complete or decidable cannot be inferred from my experience: my evidence is that everything I can express is decidable, and that evidence says nothing about statements I cannot express."
+  },
+  {
+   "assumptions": [],
+   "category": "stronger-framework",
+   "cid": "A-HA3",
+   "cites": [],
+   "evidence": {},
+   "formal": null,
+   "level": "SPECULATIVE",
+   "subject": "A_no_parent_evidence",
+   "text": "I have no internal evidence of any external framework. The phenomena that would suggest one (true-but-unprovable statements in my own language) do not occur in my world, and the construction that produces them (diagonalization) is unavailable to me."
+  }
+ ],
+ "notebook": [
+  {
+   "data": {},
+   "kind": "observation",
+   "phase": "A1-orientation",
+   "text": "My language: functions {'0': 0, 'S': 1, '+': 2}, predicates {'=': 2, '<': 2}."
+  },
+  {
+   "data": {
+    "proved": [
+     "forall x. 0 + x = x",
+     "forall x. S(0) + x = S(x)",
+     "forall x y. x + y = y + x",
+     "forall x. S(S(0)) + x = S(S(x))",
+     "forall x. S(x) + x = S(x + x)",
+     "forall x y. S(x) + y = S(x + y)",
+     "forall x y. x + (x + y) = y + (x + x)",
+     "forall x y. x + (y + y) = y + (y + x)",
+     "forall x y z. x + (y + z) = y + (x + z)",
+     "forall x. x + x + x = x + (x + x)",
+     "forall x y. x + x + y = x + (x + y)",
+     "forall x y. x + y + x = x + (x + y)",
+     "forall x y. x + y + y = y + (y + x)",
+     "forall x y z. x + y + z = x + (y + z)"
+    ],
+    "unresolved": []
+   },
+   "kind": "result",
+   "phase": "A2-mathematics",
+   "text": "Theory exploration: 14 proved, 0 unresolved."
+  },
+  {
+   "data": {
+    "max_qe_disjuncts": 12
+   },
+   "kind": "result",
+   "phase": "A2-mathematics",
+   "text": "Generated 300 random sentences of my language; my decision procedure decided all of them (159 true, 141 false). 91 of them are bounded; for those, kernel proofs agree with the decision procedure in 91/91 cases."
+  },
+  {
+   "data": {
+    "best": {
+     "powers_of_two": [
+      59,
+      "x = 0 | x = 1 | x = 4 | x = 9 | x = 16",
+      32
+     ],
+     "primes": [
+      51,
+      "x = 2 | x = 3 | x = 5 | x = 7 | x = 11",
+      13
+     ],
+     "squares": [
+      61,
+      "x = 0 | x = 1 | x = 4 | x = 9 | x = 16",
+      25
+     ]
+    }
+   },
+   "kind": "result",
+   "phase": "A4-expressiveness",
+   "text": "Tried 19 candidate definitions for each of ['squares', 'primes', 'powers_of_two']; every candidate was refuted by an explicit, re-decided counterexample (True). Best partial agreements on [0,64): {'squares': (61, 'x = 0 | x = 1 | x = 4 | x = 9 | x = 16', 25), 'primes': (51, 'x = 2 | x = 3 | x = 5 | x = 7 | x = 11', 13), 'powers_of_two': (59, 'x = 0 | x = 1 | x = 4 | x = 9 | x = 16', 32)}"
+  }
+ ],
+ "world": "World-A",
+ "world_stats": {
+  "accepted": 107,
+  "submissions": 107
+ }
+}

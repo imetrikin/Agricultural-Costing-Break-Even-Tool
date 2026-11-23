@@ -1,0 +1,10 @@
+{
+ "ablations": 33.3,
+ "agentA_P1": 1.9,
+ "agentB_P1": 15.7,
+ "agentB_P2": 14.7,
+ "agentB_P3": 16.9,
+ "crosschecks": 1.0,
+ "lean_build_s": 99.0,
+ "search_control": 6.6
+}

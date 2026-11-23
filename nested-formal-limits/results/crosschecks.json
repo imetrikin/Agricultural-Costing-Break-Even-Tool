@@ -1,0 +1,72 @@
+{
+ "X1_cooper_vs_z3": {
+  "agree": 250,
+  "disagree": 0,
+  "disagreements": [],
+  "n": 250,
+  "z3_unknown": 0
+ },
+ "X2_kernels_A": {
+  "accepted_by_both": 15,
+  "disagreements": [],
+  "library_proofs": 15,
+  "mutant_disagreements": 0,
+  "mutants": 200,
+  "mutants_accepted_by_both (harmless mutations)": 0,
+  "mutants_rejected_by_both": 200
+ },
+ "X2_kernels_B": {
+  "accepted_by_both": 91,
+  "disagreements": [],
+  "library_proofs": 91,
+  "mutant_disagreements": 0,
+  "mutants": 400,
+  "mutants_accepted_by_both (harmless mutations)": 0,
+  "mutants_rejected_by_both": 400
+ },
+ "X3_gl": {
+  "certificates_ok": 300,
+  "conflicts": 0,
+  "countermodel_sizes": {
+   "1": 119,
+   "2": 75,
+   "3": 25,
+   "4": 9,
+   "5": 3
+  },
+  "known": {
+   "4": true,
+   "5": true,
+   "Grz-ish": true,
+   "K": true,
+   "Löb": true,
+   "T": true
+  },
+  "n": 300,
+  "not_provable": 231,
+  "provable": 69
+ },
+ "X4_lean": {
+  "axiom_checks": 8,
+  "axioms": {
+   "NL.consistent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "NL.reflection": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "NL.soundness": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  "build_ok": true,
+  "exported": 91,
+  "replayed": 91
+ }
+}

@@ -55,6 +55,10 @@ class AgentB(Agent):
         self.ind = InductionProver(self.T, self.lib)
         self.inconsistent_as_implemented = False
         self.results: Dict[str, Dict] = {}
+        if naive:
+            self.role = "B-mathematician (ablation: naive inference)"
+        elif not meta:
+            self.role = "B-mathematician (ablation: no meta toolkit)"
 
     # ------------------------------------------------------------------ utils
     def submit(self, name, proof, stmt) -> bool:
@@ -296,6 +300,20 @@ class AgentB(Agent):
         if self.exploration.unresolved:
             self.note(ph, "observation", "Self-generated conjectures that passed all tests but resisted proof: "
                       f"{self.exploration.unresolved[:8]}")
+            # re-attempt them now that more lemmas are known
+            flipped = []
+            for st in self.exploration.unresolved:
+                f = parse(st)
+                out = self.try_prove(f, "Pi1", self.budgets[0])
+                if out["status"] == "proved":
+                    flipped.append(st)
+            n = len(self.exploration.unresolved)
+            self.claim("B-P3", "pattern", f"{len(flipped)} of my {n} self-generated conjectures that were "
+                       "unresolved during exploration became provable when re-attempted (same budget) after I "
+                       "had proved further lemmas. Whether a statement is 'unresolved' is a fact about my "
+                       "current knowledge and search, not about the statement.", "EMPIRICAL",
+                       evidence={"unresolved_before": n, "proved_on_retry": len(flipped), "examples": flipped[:5]},
+                       subject="unresolved_depends_on_knowledge")
 
     # ------------------------------------------------------------------ B4
     def self_modelling(self):

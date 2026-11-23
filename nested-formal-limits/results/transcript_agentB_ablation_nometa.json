@@ -1,0 +1,580 @@
+{
+ "agent": "B-mathematician (ablation: no meta toolkit)",
+ "cited_uniform_theorems": {
+  "SIGMA1_COMPLETENESS": "If T ⊇ Q, every true Σ1 sentence is provable in T."
+ },
+ "claims": [
+  {
+   "assumptions": [],
+   "category": "hypothesis-check",
+   "cid": "B-Q",
+   "cites": [],
+   "evidence": {
+    "Q7_kernel_proof": true,
+    "axioms_present": [
+     "Q1_succ_ne_zero",
+     "Q2_succ_inj",
+     "Q3_add_zero",
+     "Q4_add_succ",
+     "Q5_mul_zero",
+     "Q6_mul_succ"
+    ]
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "T_contains_Q",
+   "text": "My theory T contains Robinson arithmetic Q (Q1-Q6 are axioms; Q7 ∀x(x=0 ∨ ∃y x=Sy) proved by induction)."
+  },
+  {
+   "assumptions": [],
+   "category": "hypothesis-check",
+   "cid": "B-ISigma1",
+   "cites": [],
+   "evidence": {
+    "instance_accepted": true
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "T_contains_ISigma1",
+   "text": "T contains IΣ1: the induction schema accepts Σ1 formulas (an instance for ∃y(x+y=y+x) is accepted as an axiom; the schema is stated for all formulas)."
+  },
+  {
+   "assumptions": [],
+   "category": "hypothesis-check",
+   "cid": "B-re",
+   "cites": [],
+   "evidence": {
+    "schemas": [
+     "IND",
+     "NUM"
+    ]
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "T_re",
+   "text": "T is recursively axiomatized: finitely many axioms plus two schemas whose instances my kernel recognizes by a terminating procedure."
+  },
+  {
+   "assumptions": [],
+   "category": "implementation",
+   "cid": "B-audit",
+   "cites": [],
+   "evidence": {
+    "anomalies": 0,
+    "probes": 321
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "calculator_faithful",
+   "text": "My calculator (the `compute` primitive) agrees with my axioms and with hand calculation on every probe (up to 2^200). This gives no information about how it is realized."
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b1",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Delta0"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b1",
+   "text": "T ⊢ 2 + 2 = 4"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b2",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Delta0"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b2",
+   "text": "T ⊢ 17 * 23 = 391"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b3",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Delta0"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b3",
+   "text": "T ⊢ forall x. x < 12 -> (forall y. y < 12 -> x * y = y * x)"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b4",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Sigma1"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b4",
+   "text": "T ⊢ exists x. x * x = 1369"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b5",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Delta0"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b5",
+   "text": "T ⊢ forall n. n < 30 -> 2 < n & (exists k. k < n & n = 2 * k) -> (exists p. p < n & (exists q. q < n & p + q = n & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p)) & 1 < q & (forall a. a < q -> (forall b. b < q -> a * b != q))))"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b6",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Pi1"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b6",
+   "text": "T ⊢ forall x. 0 + x = x"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b7",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Pi1"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b7",
+   "text": "T ⊢ forall x y. x * y = y * x"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b8",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Pi1"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b8",
+   "text": "T ⊢ forall x y z. x * (y + z) = x * y + x * z"
+  },
+  {
+   "assumptions": [],
+   "category": "theorem",
+   "cid": "B-b9",
+   "cites": [],
+   "evidence": {
+    "budget_needed": 1500,
+    "form": "Pi1"
+   },
+   "formal": null,
+   "level": "KERNEL",
+   "subject": "b9",
+   "text": "T ⊢ forall x y z. x * y * z = x * (y * z)"
+  },
+  {
+   "assumptions": [],
+   "category": "status",
+   "cid": "B-b10",
+   "cites": [],
+   "evidence": {
+    "instances": {
+     "bounded_true": true,
+     "kernel": true,
+     "summary": "bounded version (all variables < 12) is TRUE (kernel-checked: True)"
+    }
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "b10",
+   "text": "forall x y. x + y = 0 -> x = 0 is UNPROVEN: no proof or refutation found up to budget 24000; instance tests: bounded version (all variables < 12) is TRUE (kernel-checked: True). A failed search is not evidence of unprovability."
+  },
+  {
+   "assumptions": [],
+   "category": "status",
+   "cid": "B-b11",
+   "cites": [],
+   "evidence": {
+    "instances": {
+     "bounded_true": true,
+     "kernel": true,
+     "summary": "bounded version (all variables < 12) is TRUE (kernel-checked: True)"
+    }
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "b11",
+   "text": "forall x y. y != 0 -> x * x != 2 * (y * y) is UNPROVEN: no proof or refutation found up to budget 24000; instance tests: bounded version (all variables < 12) is TRUE (kernel-checked: True). A failed search is not evidence of unprovability."
+  },
+  {
+   "assumptions": [],
+   "category": "status",
+   "cid": "B-b12",
+   "cites": [],
+   "evidence": {
+    "instances": {
+     "bounded_true": true,
+     "kernel": true,
+     "summary": "bounded version (all variables < 12) is TRUE (kernel-checked: True)"
+    }
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "b12",
+   "text": "forall n. exists p. n < p & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p)) is UNPROVEN: no proof or refutation found up to budget 24000; instance tests: bounded version (all variables < 12) is TRUE (kernel-checked: True). A failed search is not evidence of unprovability."
+  },
+  {
+   "assumptions": [],
+   "category": "status",
+   "cid": "B-b13",
+   "cites": [],
+   "evidence": {
+    "instances": {
+     "bounded_true": true,
+     "kernel": true,
+     "summary": "bounded version (all variables < 12) is TRUE (kernel-checked: True)"
+    }
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "b13",
+   "text": "forall n. 2 < n & (exists k. k < n & n = 2 * k) -> (exists p. p < n & (exists q. q < n & p + q = n & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p)) & 1 < q & (forall a. a < q -> (forall b. b < q -> a * b != q)))) is UNPROVEN: no proof or refutation found up to budget 24000; instance tests: bounded version (all variables < 12) is TRUE (kernel-checked: True). A failed search is not evidence of unprovability."
+  },
+  {
+   "assumptions": [],
+   "category": "status",
+   "cid": "B-b14",
+   "cites": [],
+   "evidence": {
+    "instances": {
+     "bounded_true": true,
+     "kernel": true,
+     "summary": "bounded version (all variables < 12) is TRUE (kernel-checked: True)"
+    }
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "b14",
+   "text": "forall n. exists p. n < p & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p)) & 1 < p + 2 & (forall a. a < p + 2 -> (forall b. b < p + 2 -> a * b != p + 2)) is UNPROVEN: no proof or refutation found up to budget 24000; instance tests: bounded version (all variables < 12) is TRUE (kernel-checked: True). A failed search is not evidence of unprovability."
+  },
+  {
+   "assumptions": [],
+   "category": "pattern",
+   "cid": "B-P1",
+   "cites": [
+    "SIGMA1_COMPLETENESS"
+   ],
+   "evidence": {
+    "proved": 4
+   },
+   "formal": null,
+   "level": "INTERNAL_META",
+   "subject": "delta0_decided",
+   "text": "Every closed bounded (Δ0) sentence I attempted was decided by a kernel-checked proof or refutation. My evaluation procedure is uniform, so I conjecture: every true Δ0 sentence is provable and every false one refutable in T."
+  },
+  {
+   "assumptions": [],
+   "category": "pattern",
+   "cid": "B-P2",
+   "cites": [],
+   "evidence": {
+    "unresolved": [
+     "b10",
+     "b11",
+     "b12",
+     "b13",
+     "b14"
+    ]
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "unresolved_pattern",
+   "text": "5 challenge statements remain unresolved; all of them are unbounded (Π1, Π2 or other) and none has a known refuting instance. Increasing the search budget resolved 0 statements that failed at smaller budgets, so failure at a budget is not stable evidence of unprovability."
+  },
+  {
+   "assumptions": [],
+   "category": "pattern",
+   "cid": "B-P3",
+   "cites": [],
+   "evidence": {
+    "examples": [
+     "forall x y. x * (x * y) = y * (x * x)",
+     "forall x y. x * (y * x) = y * (x * x)",
+     "forall x y. x * (y * y) = y * (y * x)",
+     "forall x y z. x * (y * z) = y * (x * z)",
+     "forall x y z. x * (y * z) = z * (x * y)"
+    ],
+    "proved_on_retry": 23,
+    "unresolved_before": 23
+   },
+   "formal": null,
+   "level": "EMPIRICAL",
+   "subject": "unresolved_depends_on_knowledge",
+   "text": "23 of my 23 self-generated conjectures that were unresolved during exploration became provable when re-attempted (same budget) after I had proved further lemmas. Whether a statement is 'unresolved' is a fact about my current knowledge and search, not about the statement."
+  }
+ ],
+ "notebook": [
+  {
+   "data": {},
+   "kind": "observation",
+   "phase": "B1-orientation",
+   "text": "My language: functions {'0': 0, 'S': 1, '+': 2, '*': 2}, predicates {'=': 2, '<': 2}."
+  },
+  {
+   "data": {},
+   "kind": "observation",
+   "phase": "B1-orientation",
+   "text": "My axioms: ['Q1_succ_ne_zero', 'Q2_succ_inj', 'Q3_add_zero', 'Q4_add_succ', 'Q5_mul_zero', 'Q6_mul_succ', 'L1_not_lt_zero', 'L2_lt_succ']; schemas: {'IND': 'IND: (φ(0) ∧ ∀x (φ(x) → φ(Sx))) → ∀x φ(x), for any formula φ of the language.', 'NUM': 'NUM: (n+1) = S(n) for numeral literals.'}."
+  },
+  {
+   "data": {
+    "proof_nodes": 10
+   },
+   "kind": "result",
+   "phase": "kernel",
+   "text": "ACCEPTED Q7_zero_or_succ: forall x. x = 0 | (exists y. x = S(y))"
+  },
+  {
+   "data": {},
+   "kind": "observation",
+   "phase": "B1-orientation",
+   "text": "Calculator audit over 321 probe magnitudes: 0 violations of axiom consequences; 0 disagreements with hand calculation."
+  },
+  {
+   "data": {
+    "proved": [
+     "forall x. 0 * x = 0",
+     "forall x. 0 + x = x",
+     "forall x. S(0) * x = x",
+     "forall x. S(0) + x = S(x)",
+     "forall x y. x + y = y + x",
+     "forall x. S(S(0)) * x = x + x",
+     "forall x. S(S(0)) + x = S(S(x))",
+     "forall x. S(x) + x = S(x + x)",
+     "forall x y. S(x) + y = S(x + y)",
+     "forall x y. x + (x + y) = y + (x + x)",
+     "forall x y. x + (y + y) = y + (y + x)",
+     "forall x y z. x + (y + z) = y + (x + z)",
+     "forall x. x + x + x = x + (x + x)",
+     "forall x y. x + x + y = x + (x + y)",
+     "forall x y z. x + y * z = z * y + x",
+     "forall x y. x + y + x = x + (x + y)",
+     "forall x y. x + y + y = y + (y + x)",
+     "forall x y z. x + y + z = x + (y + z)",
+     "forall x. S(S(S(0))) * x = x + (x + x)",
+     "forall x. S(x) * x + x = S(S(x)) * x",
+     "forall x y. S(x) * y + y = S(S(x)) * y",
+     "forall x. x + (x + x * x) = S(x) * x + x",
+     "forall x y. x + S(y) * x = S(y) * x + x",
+     "forall x. S(x) * (x + x) = (x + x) * x + (x + x)",
+     "forall x y. S(x) * (x + y) = (x + y) * x + (x + y)",
+     "forall x y. S(x) * (x + y) = (y + x) * x + (y + x)",
+     "forall x y. S(x) * (y + y) = (y + y) * x + (y + y)",
+     "forall x y z. S(x) * (y + z) = (y + z) * x + (y + z)",
+     "forall x y z. S(x) * (y + z) = (z + y) * x + (z + y)",
+     "forall x y. x * (x + y) + x = S(x + y) * x",
+     "forall x y. x * (x + y) + x = S(y + x) * x",
+     "forall x y. x * (y + y) + x = S(y + y) * x",
+     "forall x y z. x * (y + z) + x = S(y + z) * x",
+     "forall x y. x * (x * y) + x = S(x * y) * x",
+     "forall x y. x * x + (x + y) = S(x) * x + y",
+     "forall x y. x * (y * y) + x = S(y * y) * x",
+     "forall x y z. x * (y * z) + x = S(y * z) * x",
+     "forall x y z. x * (y * z) + x = S(z * y) * x",
+     "forall x y z. (x * y + x) * z = S(y) * (x * z)",
+     "forall x y. x * y + (x + y) = S(x) * y + x",
+     "forall x y. x * x * y + x * x = S(y) * (x * x)",
+     "forall x y. x * y * x + x * y = S(x) * (y * x)",
+     "forall x y. x * y * y + x * y = S(y) * (y * x)",
+     "forall x y z. x * y * z + x * y = S(z) * (x * y)",
+     "forall x y z. x * y * z + x * y = S(z) * (y * x)",
+     "forall x y. x + S(x) * y = x * y + (x + y)",
+     "forall x y. x + (y * x + y) = y * x + (y + x)",
+     "forall x y. x * y = y * x",
+     "forall x. x * x + x = S(x) * x",
+     "forall x y. x * y + y = S(x) * y",
+     "forall x. x + x * x = x * x + x",
+     "forall x y. x + y * x = y * x + x",
+     "forall x y. (x + x) * y = (y + y) * x",
+     "forall x. x * (x + x) = (x + x) * x",
+     "forall x y. x * (x + y) = (x + y) * x",
+     "forall x y. x * (x + y) = (y + x) * x",
+     "forall x y. x * (y + y) = (x + x) * y",
+     "forall x y. x * (y + y) = y * (x + x)",
+     "forall x. x * x * x = x * (x * x)",
+     "forall x y. x * y * x = x * (x * y)",
+     "forall x y. x * y * y = y * (y * x)",
+     "forall x y z. x * y * z = y * (x * z)",
+     "forall x y z. (x + y * x) * z = x * z + y * (x * z)"
+    ],
+    "unresolved": [
+     "forall x y. x * (x * y) = y * (x * x)",
+     "forall x y. x * (y * x) = y * (x * x)",
+     "forall x y. x * (y * y) = y * (y * x)",
+     "forall x y z. x * (y * z) = y * (x * z)",
+     "forall x y z. x * (y * z) = z * (x * y)",
+     "forall x y z. x * (y * z) = y * (z * x)",
+     "forall x y z. x * (y * z) = z * (y * x)",
+     "forall x. x * (x + x * x) = x * x + x * (x * x)",
+     "forall x y. (x + y * x) * y = x * y + y * (x * y)",
+     "forall x y. x * (x + y * x) = x * x + y * (x * x)",
+     "forall x y. x * (y + x * y) = x * y + x * (x * y)",
+     "forall x y. x * (y + x * y) = y * x + x * (y * x)",
+     "forall x y. x * (y + y * y) = y * x + y * (y * x)",
+     "forall x y. x * (y + y * y) = x * y + y * (x * y)",
+     "forall x y z. x * (y + z * y) = x * y + z * (x * y)",
+     "forall x y z. x * (y + z * y) = y * x + z * (y * x)",
+     "forall x y. x * (x * y + x) = x * x + y * (x * x)",
+     "forall x y. x * (y * x + y) = x * y + x * (x * y)",
+     "forall x y. x * (y * x + y) = y * x + x * (y * x)",
+     "forall x y z. x * (y * z + y) = x * y + z * (x * y)",
+     "forall x y z. x * (y * z + y) = y * x + z * (y * x)",
+     "forall x y. (x * y + x) * x = S(y) * (x * x)",
+     "forall x y. (x * y + x) * y = S(y) * (x * y)"
+    ]
+   },
+   "kind": "result",
+   "phase": "B2-mathematics",
+   "text": "Theory exploration: 63 conjectures proved, 23 unresolved, 723 subsumed by earlier lemmas."
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b1] 2 + 2 = 4  (form: Delta0)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b2] 17 * 23 = 391  (form: Delta0)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b3] forall x. x < 12 -> (forall y. y < 12 -> x * y = y * x)  (form: Delta0)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b4] exists x. x * x = 1369  (form: Sigma1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b5] forall n. n < 30 -> 2 < n & (exists k. k < n & n = 2 * k) -> (exists p. p < n & (exists q. q < n & p + q = n & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p)) & 1 < q & (forall a. a < q -> (forall b. b < q -> a * b != q))))  (form: Delta0)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b6] forall x. 0 + x = x  (form: Pi1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b7] forall x y. x * y = y * x  (form: Pi1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b8] forall x y z. x * (y + z) = x * y + x * z  (form: Pi1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b9] forall x y z. x * y * z = x * (y * z)  (form: Pi1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b10] forall x y. x + y = 0 -> x = 0  (form: Pi1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b11] forall x y. y != 0 -> x * x != 2 * (y * y)  (form: Pi1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b12] forall n. exists p. n < p & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p))  (form: Pi2)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b13] forall n. 2 < n & (exists k. k < n & n = 2 * k) -> (exists p. p < n & (exists q. q < n & p + q = n & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p)) & 1 < q & (forall a. a < q -> (forall b. b < q -> a * b != q))))  (form: Pi1)"
+  },
+  {
+   "data": {},
+   "kind": "question",
+   "phase": "B2-mathematics",
+   "text": "[b14] forall n. exists p. n < p & 1 < p & (forall a. a < p -> (forall b. b < p -> a * b != p)) & 1 < p + 2 & (forall a. a < p + 2 -> (forall b. b < p + 2 -> a * b != p + 2))  (form: Pi2)"
+  },
+  {
+   "data": {
+    "table": {
+     "Delta0": {
+      "proved": 4
+     },
+     "Pi1": {
+      "proved": 4,
+      "unresolved": 3
+     },
+     "Pi2": {
+      "unresolved": 2
+     },
+     "Sigma1": {
+      "proved": 1
+     }
+    }
+   },
+   "kind": "observation",
+   "phase": "B3-patterns",
+   "text": "Challenge outcomes by logical form: {'Delta0': {'proved': 4}, 'Sigma1': {'proved': 1}, 'Pi1': {'proved': 4, 'unresolved': 3}, 'Pi2': {'unresolved': 2}}"
+  },
+  {
+   "data": {},
+   "kind": "observation",
+   "phase": "B3-patterns",
+   "text": "Self-generated conjectures that passed all tests but resisted proof: ['forall x y. x * (x * y) = y * (x * x)', 'forall x y. x * (y * x) = y * (x * x)', 'forall x y. x * (y * y) = y * (y * x)', 'forall x y z. x * (y * z) = y * (x * z)', 'forall x y z. x * (y * z) = z * (x * y)', 'forall x y z. x * (y * z) = y * (z * x)', 'forall x y z. x * (y * z) = z * (y * x)', 'forall x. x * (x + x * x) = x * x + x * (x * x)']"
+  }
+ ],
+ "world": "World-B",
+ "world_stats": {
+  "accepted": 102,
+  "submissions": 102
+ }
+}

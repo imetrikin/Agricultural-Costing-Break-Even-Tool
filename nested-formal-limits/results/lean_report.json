@@ -1,0 +1,24 @@
+{
+ "axiom_checks": 8,
+ "axioms": {
+  "NL.consistent": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "NL.reflection": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "NL.soundness": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "build_ok": true,
+ "exported": 91,
+ "log_tail": "ℹ [4/7] Replayed NestedLimits.Audit\ninfo: ././././NestedLimits/Audit.lean:5:0: 'NL.soundness' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: ././././NestedLimits/Audit.lean:6:0: 'NL.consistent' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: ././././NestedLimits/Audit.lean:7:0: 'NL.reflection' depends on axioms: [propext, Classical.choice, Quot.sound]\n✔ [5/7] Built NestedLimits.Replay\n✔ [6/7] Built NestedLimits\nBuild completed successfully.\n",
+ "replayed": 91
+}

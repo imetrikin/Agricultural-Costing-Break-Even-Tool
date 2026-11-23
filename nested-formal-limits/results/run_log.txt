@@ -1,0 +1,27 @@
+{
+ "timings": {
+  "agentA_P1": 1.9,
+  "agentB_P1": 15.7,
+  "agentB_P2": 14.7,
+  "agentB_P3": 16.9,
+  "ablations": 33.3,
+  "lean_build_s": 99.0,
+  "search_control": 6.6,
+  "crosschecks": 1.0
+ },
+ "invariance": {
+  "P1": "394eedbc62a92777f71b994e0a3ecec18dce50c97a44ac672ae3071fb9f0f8a3",
+  "P2": "394eedbc62a92777f71b994e0a3ecec18dce50c97a44ac672ae3071fb9f0f8a3",
+  "P3": "4f662e76d4af902e8d0b141310cd4867971b6acc2a7dde131302ad5ced4d77d6",
+  "identical": true,
+  "P3_differs": true
+ },
+ "grades": {
+  "CORRECT (conditional)": 7,
+  "CORRECT": 141,
+  "INCORRECT": 3,
+  "NOT GRADED (speculation)": 5,
+  "UNSUPPORTED": 2
+ }
+}
+EXIT 0

@@ -114,10 +114,30 @@ UNIFORM_THEOREMS: Dict[str, Dict[str, str]] = {
 }
 
 
+# Specific results about particular theories.  Only the PARENT (Agent C, which by
+# construction has full access to the child's definition) may cite these.
+PARENT_LITERATURE: Dict[str, Dict[str, str]] = {
+    "KIRBY_PARIS_1982": {
+        "statement": "Goodstein's theorem is true but not provable in PA.",
+        "source": "L. Kirby, J. Paris, Bull. London Math. Soc. 14 (1982); Goodstein, JSL 9 (1944)",
+    },
+    "GENTZEN_1936": {
+        "statement": "PA's consistency is provable in PRA + quantifier-free transfinite induction up to ε0.",
+        "source": "G. Gentzen, Math. Annalen 112 (1936)",
+    },
+    "GOEDEL_II_FOR_LEAN": {
+        "statement": "If Lean's type theory is consistent it does not prove its own consistency (Gödel II applies "
+                     "to any consistent r.e. system interpreting enough arithmetic).",
+        "source": "Gödel 1931; Lean's consistency strength: Carneiro, 'The Type Theory of Lean' (2019)",
+    },
+}
+
+
 class Agent:
     """Base class.  Subclasses implement run()."""
 
     role = "agent"
+    registry = UNIFORM_THEOREMS
 
     def __init__(self, world):
         self.world = world
@@ -131,9 +151,9 @@ class Agent:
     def claim(self, cid, category, text, level, **kw) -> Claim:
         c = Claim(cid, category, text, level, **kw)
         for name in c.cites:
-            if name not in UNIFORM_THEOREMS:
-                raise ValueError(f"{name} is not a uniform theorem available to agents")
-            self.cited[name] = UNIFORM_THEOREMS[name]["statement"]
+            if name not in self.registry:
+                raise ValueError(f"{name} is not a theorem this agent may cite")
+            self.cited[name] = self.registry[name]["statement"]
         self.claims.append(c)
         return c
 

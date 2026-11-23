@@ -321,6 +321,7 @@ class Checker:
             prem_j = [memo[id(q)] for q in node.prems]
             memo[id(node)] = self._rule(node, prem_j)
             keep.append(node)
+        self.last_memo = memo
         return memo[id(p)]
 
     def check_theorem(self, p: Proof, expected: Optional[Formula] = None) -> Formula:
